@@ -13,7 +13,7 @@ html {
   block-size: 100%;
   margin: auto;
   color: #fff;
-  font-family: 'Fira Sans Condensed', sans-serif;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   background-color: #1b1919;
 }
@@ -35,4 +35,330 @@ fieldset {
 ul,
 ol {
   list-style: none;
+}
+
+.page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  display: flex;
+  padding-top: 95px;
+  place-items: end;
+  gap: 30px;
+  min-block-size: 534px;
+  min-inline-size: 1140px;
+}
+
+.title {
+  font-family: Oswald;
+  font-size: 75px;
+  font-weight: 700;
+  line-height: 70.5px;
+  text-align: left;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.content__accent {
+  color: #545050;
+}
+
+.content__list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  inline-size: 399px;
+  block-size: 305px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.content__list-item {
+  inline-size: 394px;
+  block-size: 107px;
+  padding-right: 2px; /* паддинг для скроллбара*/
+  margin: 3px 0px 3px 3px;
+}
+
+.content__list-item:focus {
+  outline: none;
+  appearance: none;
+}
+
+.content__card-link:focus-visible .content__video-card {
+  outline: none;
+  border: 1px solid white;
+}
+
+.content__details {
+  align-self: end;
+  inline-size: 1fr;
+  block-size: 534px;
+  position: relative;
+}
+
+.content__video-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.content__video-card:hover .content__video-card-title {
+  border-bottom: 2px solid white;
+}
+
+.content__video-card:hover .content__video-card-description {
+  border-bottom: 1px solid white;
+}
+
+.content__card-link {
+  display: block;
+}
+
+.content__card-link:focus-visible {
+  outline: none;
+}
+
+.content__card-link_current {
+  background-color: #545050;
+}
+
+img.content__video-card-thumbnail {
+  inline-size: 194px;
+  block-size: 103px;
+  margin-top: 2px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.content__video-card-title {
+  font-family: Oswald;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 30px;
+  text-align: left;
+  text-transform: uppercase;
+  padding-bottom: 3px;
+}
+
+.content__video-card-description {
+  font-family: Fira Sans Condensed;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 16.2px;
+  text-align: left;
+  margin-top: 6px;
+
+  display: inline-block;
+}
+
+.result__video-container {
+  inline-size: 711px;
+  position: relative;
+}
+
+.result {
+  inline-size: 711px;
+  block-size: 456px;
+}
+
+.result__video {
+  inline-size: 711px;
+}
+
+.search-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin: 0px;
+  padding: 0px;
+  block-size: 54px;
+
+  font-family: Fira Sans Condensed;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21.6px;
+  text-align: left;
+}
+
+.search-form__fieldset {
+  inline-size: 225px;
+  gap: 10px;
+  border: none;
+  outline: none;
+  opacity: 0px;
+}
+
+.search-form__label {
+  display: inline-block;
+  block-size: inherit;
+  inline-size: inherit;
+  padding-top: 2px;
+  padding-left: 2px;
+  cursor: pointer;
+}
+
+.search-form__fieldset-title {
+  font-family: Fira Sans Condensed;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21.6px;
+  text-align: left;
+}
+
+.search-form__fieldset:first-child .search-form__fieldset-title {
+  border-bottom: 1px solid white;
+  padding-bottom: 3px;
+}
+
+.search-form__textfield {
+  font-family: Fira Sans Condensed;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21.6px;
+  text-align: left;
+  background: #ffffffb2;
+  color: inherit;
+
+  block-size: inherit;
+  inline-size: inherit;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid white;
+  padding-top: 3px;
+  /*appearance: none;*/
+  outline: none;
+}
+
+.search-form__textfield:active {
+  border-right: 1px solid white;
+  border-left: 1px solid white;
+}
+
+.search-form__textfield:focus-visible {
+  outline: 1px solid white;
+  outline-offset: 2px;
+}
+
+.search-form__checkbox-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.search-form__label-text {
+  display: inline-block;
+  vertical-align: 0.15em;
+  height: 19px;
+  margin-right: 1px;
+}
+
+.search-form__fieldset:nth-child(2) .search-form__fieldset-title {
+  padding-bottom: 5px;
+}
+
+.search-form__pseudo-checkbox {
+  display: inline-block;
+  border: 1px solid #fff;
+  inline-size: 20px;
+  block-size: 20px;
+  position: relative;
+  cursor: pointer;
+}
+
+.search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  background-color: white;
+}
+
+.search-form__checkbox:focus {
+  outline: none;
+}
+
+.search-form__checkbox:focus-visible {
+  outline: none;
+  border: 1px solid white;
+}
+
+.search-form__label:has(:focus-visible) {
+  outline: none;
+  border: 1px solid white;
+}
+
+.button {
+  background-color: transparent;
+  color: inherit;
+  block-size: 34px;
+  border: 1px solid white;
+  cursor: pointer;
+
+  font-family: Fira Sans Condensed;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21.6px;
+  text-align: center;
+}
+
+.search-form__submit-button {
+  inline-size: 194px;
+}
+
+.more-button {
+  inline-size: 99.5%;
+  margin-top: 1px;
+}
+
+.button:hover {
+  text-decoration: underline;
+}
+
+.button:active {
+  background-color: #545050;
+  text-decoration: none;
+}
+
+.search-form__label:hover .search-form__label-text {
+  border-bottom: 1px solid white;
+}
+
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/*Кастомный скроллбар*/
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+  inset: 0 10px 0 0;
+  inset-inline-end: 10px;
+  padding-right: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgb(0 0 0 /0);
+  border-radius: 10px;
+  padding-right: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.993);
+  outline: 1px solid slategrey;
+  border-radius: 10px;
 }
